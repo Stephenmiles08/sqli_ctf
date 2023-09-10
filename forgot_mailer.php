@@ -30,9 +30,10 @@ $subj = 'Reset Password';
 $msg = '
         Hi,<br><br>
     In order to reset your password, please click on the link below:<br><br>
-    <a href="http://ssti.com/reset_password.php?token='.$code.'">Reset</a><br><br> or copy and paste the link in a new tab <br><br>
+    <a href="'.($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . "/reset_password.php?token=".$code.'">Reset</a><br><br> or copy and paste the link in a new tab <br><br>
 
-        http://ssti.com/reset_password.php?token='.$code.'<br><br> 
+       '.($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . "/reset_password.php?token=".$code
+        .'<br><br> 
 
         Kind Regards, <br><br>
         ctf_project
