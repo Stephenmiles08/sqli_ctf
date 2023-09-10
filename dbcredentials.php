@@ -5,10 +5,10 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$localhost = 'localhost';
-$username = 'root';
-$password = $_ENV['db_pass'];
-$db_name = $_ENV['db_user'];
+$host = $_ENV['AZURE_MYSQL_HOST'];
+$username = $_ENV['AZURE_MYSQL_USERNAME'];
+$password = $_ENV['AZURE_MYSQL_PASSWORD'];
+$db_name = $_ENV['AZURE_MYSQL_DBNAME'];
 $connect_db = new mysqli($localhost, $username, $password, $db_name);
 
 // Check for a successful database connection
