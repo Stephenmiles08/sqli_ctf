@@ -1,5 +1,5 @@
 # sqli_ctf
-$To Start the project, run:
+#To Start the project, run:
 $composer update
 this is to update the packages in the composer file.
 
