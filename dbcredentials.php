@@ -9,7 +9,7 @@ $host = $_ENV['AZURE_MYSQL_HOST'];
 $username = $_ENV['AZURE_MYSQL_USERNAME'];
 $password = $_ENV['AZURE_MYSQL_PASSWORD'];
 $db_name = $_ENV['AZURE_MYSQL_DBNAME'];
-$connect_db = new mysqli($localhost, $username, $password, $db_name);
+$connect_db = new mysqli($host, $username, $password, $db_name);
 
 // Check for a successful database connection
 if ($connect_db->connect_error) {
